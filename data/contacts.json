@@ -1,0 +1,379 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-16T07:51:13.613Z",
+  "contacts": [
+    {
+      "id": "c-1001",
+      "name": "林晓",
+      "company": "星海科技",
+      "department": "研发部",
+      "title": "前端工程师",
+      "birthday": "2003-05-12",
+      "tags": [
+        "队友",
+        "同学"
+      ],
+      "note": "EE308FZ 结对编程搭档，负责前端界面与交互。",
+      "bookmarked": true,
+      "contactMethods": [
+        {
+          "id": "m-1001a",
+          "type": "phone",
+          "label": "手机",
+          "value": "13800001111",
+          "primary": true
+        },
+        {
+          "id": "m-1001b",
+          "type": "phone",
+          "label": "备用手机",
+          "value": "13900002222",
+          "primary": false
+        },
+        {
+          "id": "m-1001c",
+          "type": "email",
+          "label": "邮箱",
+          "value": "linxiao@example.com",
+          "primary": false
+        },
+        {
+          "id": "m-1001d",
+          "type": "wechat",
+          "label": "微信",
+          "value": "linxiao_dev",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-10T02:11:00.000Z",
+      "updatedAt": "2026-11-15T07:42:00.000Z"
+    },
+    {
+      "id": "c-1002",
+      "name": "陈一",
+      "company": "福州大学",
+      "department": "软件工程系",
+      "title": "课程助教",
+      "birthday": "",
+      "tags": [
+        "老师"
+      ],
+      "note": "负责作业答疑与评分标准说明。",
+      "bookmarked": true,
+      "contactMethods": [
+        {
+          "id": "m-1002a",
+          "type": "email",
+          "label": "工作邮箱",
+          "value": "chenyi@fzu.edu.cn",
+          "primary": true
+        },
+        {
+          "id": "m-1002b",
+          "type": "tel",
+          "label": "办公室座机",
+          "value": "0591-22860000",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-09T09:00:00.000Z",
+      "updatedAt": "2026-11-14T10:30:00.000Z"
+    },
+    {
+      "id": "c-1003",
+      "name": "王梓涵",
+      "company": "云图数据",
+      "department": "平台组",
+      "title": "后端工程师",
+      "birthday": "2002-09-30",
+      "tags": [
+        "同学",
+        "技术"
+      ],
+      "note": "对 Excel 导入导出方案给了不少建议。",
+      "bookmarked": false,
+      "contactMethods": [
+        {
+          "id": "m-1003a",
+          "type": "phone",
+          "label": "手机",
+          "value": "13711112222",
+          "primary": true
+        },
+        {
+          "id": "m-1003b",
+          "type": "email",
+          "label": "邮箱",
+          "value": "wangzh@example.com",
+          "primary": false
+        },
+        {
+          "id": "m-1003c",
+          "type": "linkedin",
+          "label": "领英",
+          "value": "in/wangzihan",
+          "primary": false
+        },
+        {
+          "id": "m-1003d",
+          "type": "address",
+          "label": "地址",
+          "value": "福建省福州市闽侯县上街镇",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-08T06:20:00.000Z",
+      "updatedAt": "2026-11-13T03:15:00.000Z"
+    },
+    {
+      "id": "c-1004",
+      "name": "黄可欣",
+      "company": "墨白设计",
+      "department": "视觉设计",
+      "title": "UI 设计师",
+      "birthday": "2001-12-08",
+      "tags": [
+        "朋友",
+        "设计"
+      ],
+      "note": "帮忙看了配色和卡片样式。",
+      "bookmarked": true,
+      "contactMethods": [
+        {
+          "id": "m-1004a",
+          "type": "wechat",
+          "label": "微信",
+          "value": "kexin_design",
+          "primary": true
+        },
+        {
+          "id": "m-1004b",
+          "type": "email",
+          "label": "邮箱",
+          "value": "kexin@example.com",
+          "primary": false
+        },
+        {
+          "id": "m-1004c",
+          "type": "weibo",
+          "label": "微博",
+          "value": "@可欣画画",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-07T12:00:00.000Z",
+      "updatedAt": "2026-11-12T08:00:00.000Z"
+    },
+    {
+      "id": "c-1005",
+      "name": "John Maloco",
+      "company": "MU",
+      "department": "Electrical Engineering",
+      "title": "Lecturer",
+      "birthday": "",
+      "tags": [
+        "老师",
+        "EE302"
+      ],
+      "note": "EE302 Embedded and Realtime Systems 讲师。",
+      "bookmarked": false,
+      "contactMethods": [
+        {
+          "id": "m-1005a",
+          "type": "email",
+          "label": "School Email",
+          "value": "j.maloco@example.edu",
+          "primary": true
+        },
+        {
+          "id": "m-1005b",
+          "type": "tel",
+          "label": "Office",
+          "value": "+63-2-8888-1234",
+          "primary": false
+        },
+        {
+          "id": "m-1005c",
+          "type": "website",
+          "label": "主页",
+          "value": "https://example.edu/~maloco",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-06T04:10:00.000Z",
+      "updatedAt": "2026-11-11T04:10:00.000Z"
+    },
+    {
+      "id": "c-1006",
+      "name": "周予安",
+      "company": "青柠工作室",
+      "department": "产品部",
+      "title": "产品经理",
+      "birthday": "2000-03-21",
+      "tags": [
+        "朋友"
+      ],
+      "note": "",
+      "bookmarked": false,
+      "contactMethods": [
+        {
+          "id": "m-1006a",
+          "type": "phone",
+          "label": "手机",
+          "value": "13633334444",
+          "primary": true
+        },
+        {
+          "id": "m-1006b",
+          "type": "qq",
+          "label": "QQ",
+          "value": "88223344",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-05T05:00:00.000Z",
+      "updatedAt": "2026-11-10T05:00:00.000Z"
+    },
+    {
+      "id": "c-1007",
+      "name": "苏念",
+      "company": "榕城图书馆",
+      "department": "技术部",
+      "title": "运维",
+      "birthday": "1999-07-07",
+      "tags": [
+        "同学",
+        "福州"
+      ],
+      "note": "帮忙测试过华为云部署。",
+      "bookmarked": false,
+      "contactMethods": [
+        {
+          "id": "m-1007a",
+          "type": "phone",
+          "label": "手机",
+          "value": "13555556666",
+          "primary": true
+        },
+        {
+          "id": "m-1007b",
+          "type": "email",
+          "label": "邮箱",
+          "value": "sunian@example.com",
+          "primary": false
+        },
+        {
+          "id": "m-1007c",
+          "type": "address",
+          "label": "地址",
+          "value": "福州市鼓楼区湖东路 12 号",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-04T07:30:00.000Z",
+      "updatedAt": "2026-11-09T07:30:00.000Z"
+    },
+    {
+      "id": "c-1008",
+      "name": "郑泽宇",
+      "company": "比特动力",
+      "department": "测试组",
+      "title": "测试工程师",
+      "birthday": "2002-01-18",
+      "tags": [
+        "同学",
+        "技术"
+      ],
+      "note": "写了导入导出的边界用例。",
+      "bookmarked": false,
+      "contactMethods": [
+        {
+          "id": "m-1008a",
+          "type": "wechat",
+          "label": "微信",
+          "value": "zeyu_qa",
+          "primary": true
+        },
+        {
+          "id": "m-1008b",
+          "type": "email",
+          "label": "邮箱",
+          "value": "zeyu@example.com",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-03T02:45:00.000Z",
+      "updatedAt": "2026-11-08T02:45:00.000Z"
+    },
+    {
+      "id": "c-1009",
+      "name": "何雨桐",
+      "company": "远山教育",
+      "department": "教研部",
+      "title": "讲师",
+      "birthday": "1998-11-02",
+      "tags": [
+        "家人"
+      ],
+      "note": "周末家庭聚餐联系。",
+      "bookmarked": true,
+      "contactMethods": [
+        {
+          "id": "m-1009a",
+          "type": "phone",
+          "label": "手机",
+          "value": "13477778888",
+          "primary": true
+        },
+        {
+          "id": "m-1009b",
+          "type": "phone",
+          "label": "家庭号码",
+          "value": "0591-87654321",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-02T11:00:00.000Z",
+      "updatedAt": "2026-11-07T11:00:00.000Z"
+    },
+    {
+      "id": "c-1010",
+      "name": "吴桐",
+      "company": "自由职业",
+      "department": "",
+      "title": "技术写作者",
+      "birthday": "",
+      "tags": [
+        "朋友",
+        "写作"
+      ],
+      "note": "帮我们 review 了 CSDN 博客的 Markdown 排版。",
+      "bookmarked": false,
+      "contactMethods": [
+        {
+          "id": "m-1010a",
+          "type": "email",
+          "label": "邮箱",
+          "value": "wutong@example.com",
+          "primary": true
+        },
+        {
+          "id": "m-1010b",
+          "type": "social",
+          "label": "社交账号",
+          "value": "@wutong_writes",
+          "primary": false
+        },
+        {
+          "id": "m-1010c",
+          "type": "website",
+          "label": "网站",
+          "value": "https://wutong.example.com",
+          "primary": false
+        }
+      ],
+      "createdAt": "2026-11-01T09:20:00.000Z",
+      "updatedAt": "2026-11-06T09:20:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ee308fz-address-book",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EE308FZ Extreme Programming - Address Book (bookmark contacts, multiple contact methods, Excel import/export)",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node scripts/smoke-test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "multer": "^2.0.2"
+  },
+  "license": "MIT"
+}

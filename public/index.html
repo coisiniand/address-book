@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EE308FZ Extreme Programming - 通讯录（收藏联系人 / 多种联系方式 / Excel 导入导出）" />
+  <title>通讯录 · Address Book</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- 左侧导航 -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span class="icon" data-icon="book"></span></div>
+        <div class="brand-text">
+          <strong>通讯录</strong>
+          <small>Address Book · EE308FZ</small>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="联系人分类">
+        <button class="nav-item active" data-view="all" type="button">
+          <span class="icon" data-icon="users"></span><span>全部联系人</span>
+          <span class="nav-count" id="count-all">0</span>
+        </button>
+        <button class="nav-item" data-view="bookmarked" type="button">
+          <span class="icon" data-icon="star"></span><span>我的收藏</span>
+          <span class="nav-count" id="count-star">0</span>
+        </button>
+      </nav>
+
+      <div class="nav-section">
+        <div class="nav-section-head">
+          <span>标签</span>
+          <button type="button" class="link-btn hidden" id="btn-clear-tag">清除筛选</button>
+        </div>
+        <div class="tag-list" id="tag-list"></div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="mini-stats" id="mini-stats"></div>
+        <button type="button" class="theme-toggle" id="btn-theme">
+          <span class="icon" data-icon="moon"></span><span id="theme-label">切换到深色模式</span>
+        </button>
+      </div>
+    </aside>
+    <div class="sidebar-mask hidden" id="sidebar-mask"></div>
+
+    <!-- 主内容区 -->
+    <div class="main-wrap">
+      <header class="topbar">
+        <button type="button" class="icon-btn menu-btn" id="btn-menu" aria-label="打开菜单"><span class="icon" data-icon="menu"></span></button>
+        <div class="search-box">
+          <span class="icon" data-icon="search"></span>
+          <input id="search" type="search" autocomplete="off" placeholder="搜索姓名、公司、电话、邮箱、标签…" />
+          <button type="button" class="search-clear hidden" id="search-clear" aria-label="清空搜索"><span class="icon" data-icon="close"></span></button>
+        </div>
+        <div class="top-actions">
+          <label class="select-wrap">
+            <span class="select-label">排序</span>
+            <select id="sort" class="select">
+              <option value="updated">最近更新</option>
+              <option value="bookmark">收藏优先</option>
+              <option value="name">姓名 A-Z</option>
+              <option value="created">最近添加</option>
+            </select>
+          </label>
+          <div class="view-switch" role="group" aria-label="视图切换">
+            <button type="button" class="active" data-mode="card" title="卡片视图"><span class="icon" data-icon="grid"></span></button>
+            <button type="button" data-mode="table" title="表格视图"><span class="icon" data-icon="list"></span></button>
+          </div>
+        </div>
+      </header>
+
+      <section class="page-head">
+        <div class="page-title-wrap">
+          <h1 id="page-title">全部联系人</h1>
+          <p id="page-subtitle">管理你的联系人、收藏与联系方式</p>
+        </div>
+        <div class="toolbar">
+          <button type="button" class="btn btn-primary" id="btn-new"><span class="icon" data-icon="plus"></span>新建联系人</button>
+          <button type="button" class="btn" id="btn-import"><span class="icon" data-icon="upload"></span>导入 Excel</button>
+          <div class="dropdown">
+            <button type="button" class="btn" id="btn-export"><span class="icon" data-icon="download"></span>导出 Excel<span class="icon caret" data-icon="chevron"></span></button>
+            <div class="dropdown-menu hidden" id="export-menu">
+              <button type="button" data-export="current">导出当前筛选结果</button>
+              <button type="button" data-export="all">导出全部联系人</button>
+              <div class="dropdown-divider"></div>
+              <button type="button" data-export="template">下载标准导入模板</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="bulk-bar hidden" id="bulk-bar">
+        <span class="bulk-count" id="bulk-count">已选择 0 项</span>
+        <button type="button" class="btn btn-sm" id="bulk-star"><span class="icon" data-icon="star"></span>加入收藏</button>
+        <button type="button" class="btn btn-sm" id="bulk-unstar">取消收藏</button>
+        <button type="button" class="btn btn-sm btn-danger-ghost" id="bulk-delete"><span class="icon" data-icon="trash"></span>删除</button>
+        <button type="button" class="link-btn" id="bulk-cancel">取消选择</button>
+      </div>
+
+      <main class="content" id="content">
+        <div id="cards" class="cards"></div>
+        <div id="table-wrap" class="table-wrap hidden"></div>
+        <div id="empty" class="empty-state hidden">
+          <div class="empty-art"><span class="icon" data-icon="book"></span></div>
+          <h3 id="empty-title">还没有联系人</h3>
+          <p id="empty-desc">点击「新建联系人」，或用「导入 Excel」批量添加。</p>
+          <button type="button" class="btn btn-primary" id="empty-action">新建联系人</button>
+        </div>
+        <div id="loading" class="loading hidden"><span class="spinner"></span>正在加载…</div>
+      </main>
+
+      <footer class="pagination" id="pagination"></footer>
+    </div>
+  </div>
+
+  <!-- 联系人详情抽屉 -->
+  <div class="drawer-mask hidden" id="drawer-mask"></div>
+  <aside class="drawer hidden" id="drawer" aria-label="联系人详情"></aside>
+
+  <!-- 通用弹窗：新建/编辑、导入向导、确认框 -->
+  <div class="modal-mask hidden" id="modal-mask">
+    <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <div class="toast-stack" id="toasts" aria-live="polite"></div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
