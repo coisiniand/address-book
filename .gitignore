@@ -12,3 +12,4 @@ data/*.tmp
 data/contacts.backup.json
 uploads/
 dist/
+.vercel/
