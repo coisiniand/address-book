@@ -1,0 +1,15 @@
+# Render Blueprint：免费层一键部署（可选）
+# 用法与手填方式见 docs/免费云部署方案推荐.md 第 4 节，两种方式任选其一
+# runtime 省略，Render 会依据 package.json 自动识别为 Node
+services:
+  - type: web
+    name: ee308fz-address-book
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: HOST
+        value: "0.0.0.0"

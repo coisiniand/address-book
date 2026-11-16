@@ -73,10 +73,13 @@ npm test
 ```
 address-book/
 ├── package.json                 # 依赖与脚本
+├── render.yaml                  # Render 免费层一键部署蓝图（可选）
+├── index.js                     # Vercel / Serverless 入口：导出 app，不 listen
 ├── data/
 │   └── contacts.json            # 通讯录数据（含 10 条演示联系人）
 ├── server/
-│   ├── index.js                 # Express 入口：静态托管 + API + 错误处理
+│   ├── index.js                 # 本地 / ECS 入口：app.listen(PORT, HOST)
+│   ├── app.js                   # Express 中间件与路由注册（两个入口共用）
 │   ├── config.js                # 端口 / 数据文件 / 上传限制
 │   ├── store.js                 # JSON 仓储：CRUD、查询、批量、导入提交
 │   ├── routes/
@@ -103,6 +106,8 @@ address-book/
     ├── GitHub上传详细流程.md      # 建仓 / 3 次提交 / PR / Release
     ├── 博客模板.md              # CSDN 博客 + 评分对照 + 两份 PSP 表
     ├── 测试与演示清单.md
+    ├── Vercel部署详细流程.md
+    ├── 免费云部署方案推荐.md     # 免费平台对比 + Render / 免费 ECS 步骤
     └── 云部署指南.md
 ```
 
@@ -192,6 +197,8 @@ address-book/
 
 完整步骤（华为云 / 阿里云 / 通用 Linux，含环境变量、端口、防火墙、验证清单）见 `docs/云部署指南.md`。**注意：localhost 链接不算云部署。**
 
+> 优先免费的话先看 `docs/免费云部署方案推荐.md`：推荐 **Render 免费 Web Service**（不用信用卡、零代码改动、约 10 分钟上线）作为第二个公网链接，有余力再补一台国内免费试用 ECS。根目录的 `render.yaml` 是 Render 的一键部署蓝图。
+
 > 原帖写的是 `such as Huawei Cloud or Alibaba Cloud`，即**举例**而非指定平台，腾讯云或任意有公网 IP 的云主机同样可以；且本项标为 `optional`，属于 15 分加分项而非必做。详见 `docs/云部署指南.md` 开头的「平台要求澄清」。
 
 ---
@@ -218,4 +225,6 @@ address-book/
 - `docs/GitHub上传详细流程.md` —— 建仓 / 3 次提交 / Publish / 邀请队友 / PR / Release 的可照做步骤
 - `docs/博客模板.md` —— 个人 CSDN 博客模板，含作业描述、评分对照与两份 PSP 表
 - `docs/测试与演示清单.md` —— 33 项自动化断言说明、验收项、截图清单、演示视频分镜
-- `docs/云部署指南.md` —— 上线加分项操作手册
+- `docs/云部署指南.md` —— 上线加分项操作手册（含「平台要求澄清」）
+- `docs/Vercel部署详细流程.md` —— Vercel Serverless 部署步骤、限制与排错
+- `docs/免费云部署方案推荐.md` —— 免费平台对比、Render 免费部署、国内免费 ECS 领取与部署、不推荐清单

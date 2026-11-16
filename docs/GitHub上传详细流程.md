@@ -63,11 +63,15 @@
 
 | 次序 | 勾选的文件 | Summary（可直接复制） | 对应的作业叙事 |
 | --- | --- | --- | --- |
-| ① | `server\`、`scripts\`、`package.json`、`package-lock.json`、`.gitignore`、`.editorconfig`、`start.bat` | `feat: backend API and Excel service` | 后端接口、JSON 仓储、Excel 生成/解析、自动化测试 |
+| ① | `server\`、`index.js`（根目录）、`render.yaml`、`scripts\`、`package.json`、`package-lock.json`、`.gitignore`、`.gitattributes`（若有）、`.editorconfig`、`start.bat` | `feat: backend API and Excel service` | 后端接口、JSON 仓储、Excel 生成/解析、自动化测试、Vercel 函数入口、Render 部署蓝图 |
 | ② | `public\`（整个目录：`index.html`、`css\`、`js\`、`favicon.svg`） | `feat: address book UI and import wizard` | 页面样式、收藏交互、动态联系方式表单、导入向导 |
 | ③ | `README.md`、`docs\`、`data\` | `docs: readme, coding standard and blog template` | 需求对照、代码规范、API/部署文档、博客模板、演示数据 |
 
-> `docs\` 里现在包含：`API接口文档.md`、`代码规范.md`、`博客模板.md`、`测试与演示清单.md`、`云部署指南.md`、`需求分析与实现对照.md`、`GitHub上传详细流程.md`（本文件）。第 ③ 次提交会把它们一起带上。
+> `docs\` 里现在包含：`API接口文档.md`、`代码规范.md`、`博客模板.md`、`测试与演示清单.md`、`云部署指南.md`、`需求分析与实现对照.md`、`Vercel部署详细流程.md`、`免费云部署方案推荐.md`、`GitHub上传详细流程.md`（本文件）。第 ③ 次提交会把它们一起带上。
+>
+> ⚠️ 根目录的 **`index.js` 是 Vercel / Serverless 入口**，必须在第 ① 次提交里一起勾选；漏传的话 Vercel 部署后 `/api/*` 会全部 404。
+>
+> 根目录的 **`render.yaml` 是 Render 免费层一键部署蓝图**，也放在第 ① 次提交；漏传不影响网页手填方式部署，但会失去 Blueprint 一键导入的便利。
 >
 > 如果左侧一次显示全部文件不好分辨，可以按目录逐个勾选；**每次提交前确认没有把 `node_modules` 勾进去**（正常情况下它被 `.gitignore` 隐藏，根本不会出现）。
 
