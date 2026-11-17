@@ -37,26 +37,26 @@
 
 ---
 
-## 2. 前置条件
+## 2. 前置条件（截至 2026-11-16 已全部就绪 ✅）
 
-- [ ] 一个 **Public 的 GitHub 仓库**，且**包含新增的根目录 `index.js`**（否则 Vercel 上会 404）
-      → 还没传？按 `docs/GitHub上传详细流程.md` 操作；第 ① 次提交请把 `index.js` 一起勾上
+- [x] **Public GitHub 仓库已存在**：`https://github.com/coisiniand/address-book`（HTTP 200，老师可访问）
+- [x] 根目录 `index.js`、`server/app.js` 等 Vercel 入口**已提交并推送到 main**（远端 HEAD `82ea01d`，与本地一致，已用 `git show origin/main:index.js` 验证）
+- [x] 当前提交历史：`12ec43c Initial commit` → `549d252 feat: add Vercel serverless entry and split express app` → `82ea01d docs: add Vercel deployment guide and free cloud options`（共 3 次，已满足"至少 3 次 commit"；**队友仍需各自做一次提交**）
+- [x] `data/contacts.json` 干净：10 条演示联系人、4 条收藏，无真实隐私信息
 - [ ] GitHub 账号（Vercel 直接用它登录，最省事）
 - [ ] 本机情况：普通终端**没有系统 `git` / `npm`**，但 GitHub Desktop 已安装 → **走网页导入路线，不要用 Vercel CLI**
-- [ ] `data/contacts.json` 里只有演示数据，无真实隐私信息（部署后任何人都能操作这份数据）
+
+> 重要：**不用再做任何 GitHub 上传操作**，直接跳到第 3.2 节注册 Vercel 并导入仓库即可。除非你之后又改了代码，才需要重新 Commit + Push。
 
 ---
 
 ## 3. 详细操作步骤（网页版，逐项照做）
 
-### 3.1 先把最新代码推到 GitHub
+### 3.1 先把最新代码推到 GitHub —— ✅ 已完成，可跳过
 
-1. 打开 GitHub Desktop，左侧应能看到改动：`index.js`（新）、`server/app.js`（新）、`server/index.js`（改）、`.gitignore`（改）、`docs/Vercel部署详细流程.md`（新）。
-2. 填 Summary，例如 `feat: vercel serverless entry and express app split`。
-3. `Commit to main` → 点顶部 **`Push origin`**。
-4. 浏览器打开仓库，确认根目录能看到 `index.js` 和 `public/`。
+已于 2026-11-16 21:25 完成两次提交并推送，仓库 `coisiniand/address-book` 的 main 分支已包含 Vercel 入口。你的 GitHub Desktop 现在应该是干净的（无待提交改动）。
 
-> 漏了这一步，Vercel 拉到的还是旧代码，部署必然失败。
+> 若之后又修改了代码，才需要重复：GitHub Desktop 勾选改动 → 填 Summary → `Commit to main` → `Push origin`。漏了 Push，Vercel 拉到的就是旧代码。
 
 ### 3.2 注册 / 登录 Vercel
 
