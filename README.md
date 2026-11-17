@@ -234,3 +234,11 @@ address-book/
 - `docs/云部署指南.md` —— 上线加分项操作手册（含「平台要求澄清」）
 - `docs/Vercel部署详细流程.md` —— Vercel Serverless 部署步骤、限制与排错
 - `docs/免费云部署方案推荐.md` —— 免费平台对比、Render 免费部署、国内免费 ECS 领取与部署、不推荐清单
+## Public Deployment and Testing
+
+The project has been deployed and tested through the following public addresses:
+
+- Primary: https://wbapp-t42kxt59nxbhfujwrrc1kw.app.workbuddy.host/?sharecode=H3GSS33MLH
+- Backup: https://ee308fz-address-book.vercel.app
+
+The main functions, including contact bookmarking, multiple contact methods, Excel import/export, and responsive layout, have been manually tested.
